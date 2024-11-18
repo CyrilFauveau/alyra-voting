@@ -9,6 +9,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Voting is Ownable {
     /// @notice ID of the winning proposal after votes are tallied
     uint public winningProposalID;
+    /// @notice Id for incremental tally
+    uint public lastTalliedIndex;
     
     /// @notice Struct representing a voter
     struct Voter {
@@ -149,16 +151,26 @@ contract Voting is Ownable {
 
     /// @notice Tallies votes and determines the winning proposal
     /// @dev Can only be called by the contract owner after the voting session ends
-    function tallyVotes() external onlyOwner {
+    /// @param batchSize Size of the batch
+    function tallyVotes(uint batchSize) external onlyOwner {
         require(workflowStatus == WorkflowStatus.VotingSessionEnded, "Current status is not voting session ended");
-        uint _winningProposalId;
-        for (uint256 p = 0; p < proposalsArray.length; p++) {
-            if (proposalsArray[p].voteCount > proposalsArray[_winningProposalId].voteCount) {
-                _winningProposalId = p;
+
+        uint endIndex = lastTalliedIndex + batchSize;
+        if (endIndex > proposalsArray.length) {
+            endIndex = proposalsArray.length;
+        }
+
+        for (uint i = lastTalliedIndex; i < endIndex; i++) {
+            if (proposalsArray[i].voteCount > proposalsArray[winningProposalID].voteCount) {
+                winningProposalID = i;
             }
         }
-        winningProposalID = _winningProposalId;
-        workflowStatus = WorkflowStatus.VotesTallied;
-        emit WorkflowStatusChange(WorkflowStatus.VotingSessionEnded, WorkflowStatus.VotesTallied);
+
+        lastTalliedIndex = endIndex;
+    
+        if (lastTalliedIndex == proposalsArray.length) {
+            workflowStatus = WorkflowStatus.VotesTallied;
+            emit WorkflowStatusChange(WorkflowStatus.VotingSessionEnded, WorkflowStatus.VotesTallied);
+        }
     }
 }
