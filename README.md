@@ -1,6 +1,6 @@
 # Spécifications
 
-Votre Dapp doit permettre :
+Votre Dapp doit permettre
 
 - **L’enregistrement d’une liste blanche d'électeurs.**  
   **Statut :** ✅ Fait  
@@ -28,3 +28,14 @@ Votre Dapp doit permettre :
 
 - **À tout le monde de consulter le résultat.**  
   **Statut :** ❌ Pas fait
+
+# Avancement
+
+- **Utilisation d'événements**
+  ✅ Fait  
+
+- **Déploiement**
+  ❌ Pas fait
+
+- **Vidéo du workflow**
+  ❌ Pas fait
