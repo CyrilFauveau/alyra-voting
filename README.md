@@ -1,3 +1,5 @@
+Code réalisé par Cyril Fauveau.
+
 # Spécifications
 
 Votre Dapp doit permettre
@@ -39,3 +41,7 @@ Votre Dapp doit permettre
 
 - **Vidéo du workflow**
   ❌ Pas fait
+
+# Message
+
+**Les éléments n'ayant pas été fait le sont par manque de temps, je vais continuer à mettre à jour le code après la date de rendu.**
