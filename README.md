@@ -20,16 +20,16 @@ Votre Dapp doit permettre
   **Statut :** ✅ Fait  
 
 - **Aux électeurs inscrits de voter pour leurs propositions préférées.**  
-  **Statut :** ❌ Pas fait  
+  **Statut :** ✅ Pas fait  
 
 - **À l'administrateur de mettre fin à la session de vote.**  
   **Statut :** ✅ Fait  
 
 - **À l'administrateur de comptabiliser les votes.**  
-  **Statut :** ❌ Pas fait  
+  **Statut :** ✅ Pas fait  
 
 - **À tout le monde de consulter le résultat.**  
-  **Statut :** ❌ Pas fait
+  **Statut :** ✅ Pas fait
 
 # Avancement
 
