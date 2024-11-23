@@ -34,7 +34,10 @@ Votre Dapp doit permettre
 # Avancement
 
 - **Utilisation d'événements**
-  ✅ Fait  
+  ✅ Fait
+
+- **Affichage conditionnel**
+  ✅ En cours
 
 - **Déploiement**
   ❌ Pas fait
