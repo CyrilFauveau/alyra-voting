@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
 import { contractAddress, contractAbi } from '@/constants';
 import { Button } from './ui/button';
+import { Alert, AlertTitle, AlertDescription } from './ui/alert';
 
 const AdvanceStatus = () => {
     const { data: status, isPending, error, writeContract } = useWriteContract();
