@@ -40,11 +40,8 @@ Votre Dapp doit permettre
   ✅ En cours
 
 - **Déploiement**
-  ❌ Pas fait
+  ❌ Non fait
 
 - **Vidéo du workflow**
-  ❌ Pas fait
+  ❌ Non fait
 
-# Message
-
-**Les éléments n'ayant pas été fait le sont par manque de temps, je vais continuer à mettre à jour le code après la date de rendu.**
